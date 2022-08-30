@@ -1,0 +1,14 @@
+﻿
+@{
+    ViewBag.Title = "detail";
+    var product = new string[] { "iphone", "window" };
+}
+
+<h2>detail</h2>
+
+
+@Html.Partial("_demopartialview")
+ @foreach (var item in product)
+{
+    <p>@item</p>
+}
