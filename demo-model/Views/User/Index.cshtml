@@ -1,0 +1,33 @@
+﻿@model demo_model.Models.Student
+@{
+    ViewBag.Title = "Index";
+
+}
+
+<h2>Index</h2>
+@using (Html.BeginForm())
+{
+    
+    <form class="form-group">
+        <div>@Html.LabelFor(m => m.Id)</div>
+        <div class="form-control">@Html.EditorFor(m => m.Id)</div>
+
+        <div>@Html.LabelFor(m => m.FullName)</div>
+        <div class="form-control">@Html.EditorFor(m => m.FullName)</div>
+
+        <div>@Html.LabelFor(m => m.Email)</div>
+        <div class="form-control">@Html.EditorFor(m => m.Email)</div>
+
+        <div>@Html.LabelFor(m => m.Phone)</div>
+        <div class="form-control">@Html.EditorFor(m => m.Phone)</div>
+
+        <div>@Html.LabelFor(m => m.Address)</div>
+        <div class="form-control">@Html.EditorFor(m => m.Address)</div>
+
+        <div>@Html.LabelFor(m => m.Gender)</div>
+        <div class="form-control">@Html.EditorFor(m => m.Gender)</div>
+        <br />
+        <button formmethod="post" type="submit">save</button>
+    </form>
+}
+

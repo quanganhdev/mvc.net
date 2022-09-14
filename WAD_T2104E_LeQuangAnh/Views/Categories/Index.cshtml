@@ -1,0 +1,41 @@
+﻿@model IEnumerable<WAD_T2104E_LeQuangAnh.EDM.Category>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Categoryid)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Categoryname)
+        </th>
+
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Categoryid)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Categoryname)
+        </td>
+
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id = item.Categoryid }) |
+            @Html.ActionLink("Details", "Details", new { id = item.Categoryid }) |
+            @Html.ActionLink("Delete", "Delete", new { id = item.Categoryid })
+        </td>
+    </tr>
+}
+
+</table>

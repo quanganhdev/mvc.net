@@ -1,0 +1,19 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+    var students =(List<demo_model.Models.Student>) ViewBag.students;
+}
+
+<h2>Index</h2>
+@foreach (var student in students)
+{
+    @student.Id
+    @student.FullName
+    @student.Phone
+    @student.Email
+    @student.Address
+    @student.Gender
+    <br />
+}
+
+
